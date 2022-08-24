@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Anek+Tamil:wght@300&display=swap');
+
+/*
+font-family: 'Amatic SC', cursive;
+font-family: 'Anek Tamil', sans-serif;
+*/
+
+body{
+    background-color: black;
+    color: white;
+}
+#cards{
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+    height: 100vh;
+    margin: auto;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 70vh;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: whitesmoke;
+    opacity: 0.9;
+}
+.card h5{
+    font-size: 2rem;
+    font-family: 'Amatic SC', cursive;
+    margin: 0;
+    color: black;
+}
+#one{
+    display: flex;
+    background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/tarot-gold-edition-major-arcana-the-star-serge-averbukh.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 90%;
+    height: 90%;
+}
+#three{
+    display: flex;
+    background-image: url(https://th.bing.com/th/id/R.ae151535217e04200c98d8f3afeff885?rik=gpco8ESbsIh1qQ&pid=ImgRaw&r=0);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 90%;
+    height: 90%;
+}
+
+#message-area{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Anek Tamil', sans-serif;
+    width: 33%;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    
+}
+
+#message-area h1{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3rem;
+}
+#message-area p{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5rem;
+}
+
+#message-area input{
+    min-width: 70%;
+    height:1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#message{
+    display: flex;
+    color: aliceblue;
+    text-align: justify;
+    display: none;
+    
+}
+
+label[for="Message"]{
+    display: none;
+}
+button{
+    width: 5rem;
+    border-radius:0.5rem, 0.7rem;
+    margin:1rem auto;
+    opacity: 0.7;
+    font-weight: bolder;
+}
+
+@media only screen and (max-width: 950px){
+    #message-area{
+        padding-top: 10rem;
+        background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/tarot-gold-edition-major-arcana-the-star-serge-averbukh.jpg);
+        background-size: 70% 25%;
+        background-position:50% 0.8rem;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+        
+    }
+    .card{
+        display: none;
+    }
+    #message-area input{
+       min-width: unset;
+       width: 50%;
+       
+    }
+    #message{
+        width: 70%;
+    }
+
+}
