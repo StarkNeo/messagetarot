@@ -98,7 +98,7 @@ body{
 label[for="Message"]{
     display: none;
 }
-button{
+#submit,#reset{
     width: 5rem;
     border-radius:0.5rem, 0.7rem;
     margin:1rem auto;
@@ -112,13 +112,23 @@ button{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+#submit{
+    display: flex;
+}
 
-button:hover{
+#reset{
+    display: none;
+    justify-content: center;
+}
+
+#submit:hover{
     cursor: pointer;
     transform: translateY(-1px);
     background-color: whitesmoke;
     color: black;
 }
+
+
 @media only screen and (max-width: 950px){
     #message-area{
         padding-top: 7rem;
