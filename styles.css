@@ -54,6 +54,7 @@ body{
 #message-area{
     display: flex;
     flex-direction: column;
+    
     font-family: 'Anek Tamil', sans-serif;
     width: 33%;
     height: 70vh;
@@ -85,9 +86,12 @@ body{
 
 #message{
     display: flex;
-    color: aliceblue;
+    color: black;
     text-align: justify;
     display: none;
+    background-color: deepskyblue;
+    font-family: 'Anek Tamil', sans-serif;
+    font-weight: bold;
     
 }
 
@@ -100,11 +104,24 @@ button{
     margin:1rem auto;
     opacity: 0.7;
     font-weight: bolder;
+    background-color: transparent;
+    color: white;
+    border: 3px solid whitesmoke;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
+button:hover{
+    cursor: pointer;
+    transform: translateY(-1px);
+    background-color: whitesmoke;
+    color: black;
+}
 @media only screen and (max-width: 950px){
     #message-area{
-        padding-top: 10rem;
+        padding-top: 7rem;
         background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/tarot-gold-edition-major-arcana-the-star-serge-averbukh.jpg);
         background-size: 70% 25%;
         background-position:50% 0.8rem;

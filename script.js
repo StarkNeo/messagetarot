@@ -17,19 +17,45 @@ const messages=[
 let errorbox=document.getElementById('error');
 const getAmessage=()=>{
 
-    let name=document.getElementById('name').value;
+    let name=document.getElementById('name');
+    let birth=document.getElementById('birth');
     let message=document.getElementById('message');
     let index=Math.floor(Math.random()*8)
     let advice=messages[index];
     let label=document.querySelector("label[for=Message]");
     label.style.display='flex';
     message.style.display='flex';
-    
-    if(!name) message.innerHTML="We don't have a message for you since there is no name provided,dont let this opportunity go away, there is an advice waiting for you ";
-    else message.innerHTML=`${name} ${advice}`;
-    
+    //destructuring date of birthday for range age validation
+    let dateBirth= new Date(birth.value);
+    let birthYear=dateBirth.getFullYear();
+    let birthMonth=dateBirth.getMonth();
+    let birthDay=dateBirth.getDay(); 
 
+    //destructuring actual date for range age validation
+    let dateToday=new Date();
+    let todayYear=dateToday.getFullYear();
+    let todayMonth=dateToday.getMonth();
+    let todayDay=dateToday.getDay();
+
+
+    if(!name.value || !birth.value) message.innerHTML="We don't have a message for you since there is no name or a birthday provided,dont let this opportunity go away, there is an advice waiting for you ";
+    //condition for age's validation
+    else if((todayYear-birthYear)>=18 && (birthMonth-todayMonth)>=0 && (birthDay-todayDay)>=0){
+        message.innerHTML=`${name.value} ${advice}`;
+    }
+    else{
+        message.innerHTML=' ';
+        alert("You must be 18 years old to play");
+        name.value=' ';
+        birth.value=' ';
+    }
+    
+    
+    
 }
 
 let button=document.getElementById('submit');
-button.addEventListener('click',getAmessage);
+button.addEventListener('click',()=>{
+    getAmessage();
+    
+});
